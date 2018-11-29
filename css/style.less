@@ -1,19 +1,28 @@
+// VARIABLES
+@orangeIMAC: ;
+@blueIMAC: ;
+@greenIMAC: ;
+@red: #c74242;;
+@brown: #231e1e;;
+@font: 'Allerta Stencil', sans-serif;
+
 p, h1, h2, h3, ul, li, button{
 	margin:0;
 	padding: 0;
 	list-style-type: none;
 }
+
 body {
 	margin: 0 auto;
-	background-color: #231e1e;
+	background-color: @brown;
 	header {
-		background-color: #c74242;
+		background-color: @red;
 		padding: 0 50px 5px 50px;
-		margin: 0 0 2% 0;
+		margin: 0 0 40px 0;
 		h1 {
 			color:white;
 			font-size: 2em;
-			font-family: 'Allerta Stencil', sans-serif;
+			font-family: @font;
 			letter-spacing: 10px;
 			span {
 				text-transform: uppercase;
@@ -67,18 +76,18 @@ body {
 		}
 		#flex-section2 {
 			h3 {
-				font-family: 'Allerta Stencil', sans-serif;
+				font-family: @font;
 				color:white;
 				font-weight: bold;
 				margin: 0 0 20px 0;
 				font-size: 30px;
 			}
 			p {
-				font-family: 'Allerta Stencil', sans-serif;
+				font-family: @font;
 				color:white;
 			}
 			h2 {
-				font-family: 'Allerta Stencil', sans-serif;
+				font-family: @font;
 				color:white;
 				font-weight: bold;
 				margin: 40px 0 0 0;
@@ -94,7 +103,7 @@ body {
 				}
 			}
 			button {
-				font-family: 'Allerta Stencil', sans-serif;
+				font-family: @font;
 				color:white;
 				text-transform: uppercase;
 				font-size: 20px;
@@ -110,7 +119,7 @@ body {
 		}
 	}
 	footer {
-		background-color: #c74242;
+		background-color: @red;
 		height: 100px;
 		margin-top: 30px;
 	}
