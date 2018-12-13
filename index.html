@@ -14,7 +14,7 @@
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-	
+	<!-- POP UP BIENVENUE -->
 	<div id="levelForm">
 		<h1>Bienvenue sur<span>s</span>udok<span class="imac">imac</span></h1>
 		<form id="form">
@@ -30,10 +30,25 @@
 					</select>
 				</li>
 			</ul>
-			<input id="button" type="submit" value="Jouer"/>
+			<input id="jouer" type="submit" value="Jouer"/>
 		</form>
 	</div>
+	<!-- POP UP BRAVO -->
+	<div id="popBravo">
+		<h1>Félicitation machin</h1>
+		<h2>Tu as réussi en <span>0:00:00:00</span></h2>
+		<button class="rejouer">rejouer</button>
+	</div>
+	<!-- POP UP FAIL -->
+	<div id="popFail">
+		<h1>Perdu machin</h1>
+		<h2>Tu as perdu en <span>0:00:00:00</span></h2>
+		<button id="continer">Continuer</button>
+		<button class="rejouer">Nique ça m'a saoulé</button>
+	</div>
+	<!-- COVER -->
 	<div id="cover"></div>
+	<!-- PAGE -->
 	<header>
 		<h1>
 			<span>s</span>udok<span class="imac">imac</span>
