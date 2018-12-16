@@ -17,6 +17,8 @@
 @chronoFont5: 'Share Tech Mono', monospace;
 @chronoFont6: 'Sarpanch', sans-serif;
 
+@boxShadow: 5px 5px 45px -5px rgba(0,0,0,0.07);
+
 
 p, h1, h2, h3, ul, li, button{
 	margin:0;
@@ -29,7 +31,6 @@ body {
 	background-image: @gradientSpiky;
 	#levelForm {
 		display: inline;
-		
 		background-color: white;
 		position: absolute;
 		margin: auto;
@@ -40,6 +41,7 @@ body {
 		border-radius: 5px;
 		text-align: center;
 		padding:2%;
+		box-shadow:@boxShadow;
 		h1 {
 			font-size: 35px;
 			font-family: @font;
@@ -106,6 +108,7 @@ body {
 		border-radius: 5px;
 		text-align: center;
 		padding:3% 0;
+		box-shadow:@boxShadow;
 		h1 {
 			font-size: 30px;
 			font-family: @font;
@@ -148,6 +151,7 @@ body {
 		border-radius: 5px;
 		text-align: center;
 		padding:3% 0;
+		box-shadow:@boxShadow;
 		h1 {
 			font-size: 30px;
 			font-family: @font;
@@ -226,6 +230,7 @@ body {
 			border-radius: 5px;
 			padding: 5px;
 			margin-right: 50px;
+			box-shadow:@boxShadow;
 			.wrapper {
 				width: 595px;
 				display: grid;
@@ -257,6 +262,7 @@ body {
 				background-image: @gradientGW;
 				border-radius: 5px;
 				padding: 3% 3% 4% 3%;
+				box-shadow:@boxShadow;
 				h3 {
 					font-family: @font;
 					color:@brown;
@@ -280,6 +286,7 @@ body {
 					border-radius: 5px;
 					width: 46%;
 					padding:2%;
+					box-shadow:@boxShadow;
 					#chronotime {
 						background-color: rgba(0,0,0,0);
 						border: none;
@@ -318,6 +325,7 @@ body {
 					border-radius: 5px;
 					width: 39%;
 					padding:2%;
+					box-shadow:@boxShadow;
 					h2 {
 						font-family: @font;
 						color:@brown;
@@ -341,7 +349,7 @@ body {
 				border-radius: 5px;
 				padding: 3% 3% 4% 3%;
 				height: 130px;
-
+				box-shadow:@boxShadow;
 			}
 		}
 	}
