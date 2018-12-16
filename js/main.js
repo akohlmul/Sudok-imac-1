@@ -199,16 +199,11 @@ function buttonClicked() {
 		popUpBravo.style.display = 'inline';
 		cover.style.display = 'inline';
 		document.querySelector("#popBravo h1").innerHTML = "Félicitations "+pseudoField.value+" !";
-		document.querySelector("#popBravo h2 span").innerHTML = temps;
 	}
 	else{
 		popUpFail.style.display = 'inline';
 		cover.style.display = 'inline';
 		document.querySelector("#popFail h1").innerHTML = "Perdu "+pseudoField.value;
-		if(temps != undefined)
-			document.querySelector("#popFail h2 span").innerHTML = temps;
-		else
-			document.querySelector("#popFail h2 span").innerHTML = "0:00:00:00";
 	}
 }
 
@@ -229,7 +224,7 @@ var start = 0
 var end = 0
 var diff = 0
 var timerID = 0
-var temps;
+var temps="0:00:00:00";
 
 function chrono(){
 	end = new Date()
@@ -276,6 +271,7 @@ function chronoStop(){
 	temps = document.getElementById("chronotime").value;
 	/*On ajoute le temps dans le pop up de Fail*/
 	document.querySelector("#popFail h2 span").innerHTML = temps;
+	document.querySelector("#popBravo h2 span").innerHTML = temps;
 	clearTimeout(timerID);
 }
 
