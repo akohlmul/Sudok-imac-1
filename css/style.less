@@ -3,13 +3,20 @@
 @blueIMAC: ;
 @greenIMAC: ;
 @red: #c74242;;
-@brown: #231e1e;;
-@font: 'Allerta Stencil', sans-serif;
+@brown: #231e1e;
+
 @gradientGW:linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-@gradientStrongBliss:linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+@gradientStrongBliss:linear-gradient(to right, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
 @gradientSpiky:linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
-@gradientWater:linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
-@gradientChild:linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
+
+@font: 'Allerta Stencil', sans-serif;
+@chronoFont1: 'Inconsolata', monospace;
+@chronoFont2: 'Orbitron', sans-serif;
+@chronoFont3: 'Aldrich', sans-serif;
+@chronoFont4: 'Allerta', sans-serif;
+@chronoFont5: 'Share Tech Mono', monospace;
+@chronoFont6: 'Sarpanch', sans-serif;
+
 
 p, h1, h2, h3, ul, li, button{
 	margin:0;
@@ -22,48 +29,156 @@ body {
 	background-image: @gradientSpiky;
 	#levelForm {
 		display: inline;
-		height: 400;
-		width: 500;
+		
 		background-color: white;
 		position: absolute;
 		margin: auto;
-		right: 200px;		
-		left: 200px;
+		right: 350px;		
+		left: 350px;
 		top: 100px;
 		z-index: 10;
 		border-radius: 5px;
 		text-align: center;
 		padding:2%;
+		h1 {
+			font-size: 35px;
+			font-family: @font;
+			letter-spacing: 7px;
+			text-align: center;
+			margin-bottom: 5px;
+			span {
+				text-transform: uppercase;
+				font-size: 50px;
+			}
+			.imac {
+				font-size: 40px;
+			}
+		}
+		form {
+			ul {
+				width: 250px;
+				margin:0 auto;
+				li {
+					padding: 65px 0;
+					label {
+						font-family:@font;
+						float: left;
+						padding-bottom: 10px;
+					}
+					#inputName {
+						float: left;
+						width: 250px;
+						font-family: @font;
+						font-size: 15px;
+						padding: 1%;
+					}
+					.level {
+						float: left;
+						width: 250px;
+						font-family: @font;
+						font-size: 15px;
+						padding: 1%;
+					}
+				}
+			}
+			#jouer {
+				margin:60px 0 40px 0;
+				font-family: @font;
+				text-transform: uppercase;
+				background-image: @gradientStrongBliss;
+				color: white;
+				padding: 5px 10px;
+				border: none;
+				border-radius: 5px;
+				font-size: 20px;
+			}
+		}
 	}
 	#popBravo {
 		display: inline;
-		height: 400;
-		width: 500;
 		background-color: white;
 		position: absolute;
 		margin: auto;
-		right: 400px;		
-		left: 400px;
+		right: 350px;		
+		left: 350px;
 		top: 100px;
 		z-index: 10;
 		border-radius: 5px;
 		text-align: center;
-		padding:2%;
+		padding:3% 0;
+		h1 {
+			font-size: 30px;
+			font-family: @font;
+			letter-spacing: 7px;
+			text-align: center;
+			margin-bottom: 5px;
+			padding-bottom:3%;
+		}
+		h2 {
+			font-family: @font;
+			padding-bottom:5%;
+			span {
+				font-family: @chronoFont5;
+				font-size: 30px;
+			}
+		}
+		#rejouer {
+			font-family: @font;
+			text-transform: uppercase;
+			background-image: @gradientStrongBliss;
+			padding: 5px 10px;
+			border: none;
+			border-radius: 5px;
+			font-size: 20px;
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
 	}
 	#popFail {
 		display: inline;
-		height: 400;
-		width: 500;
 		background-color: white;
 		position: absolute;
 		margin: auto;
-		right: 400px;		
-		left: 400px;
+		right: 350px;		
+		left: 350px;
 		top: 100px;
 		z-index: 10;
 		border-radius: 5px;
 		text-align: center;
-		padding:2%;
+		padding:3% 0;
+		h1 {
+			font-size: 30px;
+			font-family: @font;
+			letter-spacing: 7px;
+			text-align: center;
+			margin-bottom: 5px;
+			padding-bottom:3%;
+		}
+		h2 {
+			font-family: @font;
+			padding-bottom:5%;
+			span {
+				font-family: @chronoFont5;
+				font-size: 30px;
+			}
+		}
+		button {
+			margin: 0 3%;
+			font-family: @font;
+			text-transform: uppercase;
+			background-image: @gradientStrongBliss;
+			padding: 5px 10px;
+			border: none;
+			border-radius: 5px;
+			font-size: 20px;
+			color: white;
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
 	}
 	#cover {
 		display: inline;
@@ -77,25 +192,28 @@ body {
 	}
 	header {
 		padding: 0 50px 5px 50px;
-		margin: 0 0 20px 0;
+		margin: 0 0 30px 0;
 		h1 {
 			color:white;
-			font-size: 2em;
+			font-size: 30px;
 			font-family: @font;
 			letter-spacing: 10px;
+			text-align: center;
+			margin-bottom: 5px;
 			span {
 				text-transform: uppercase;
-				font-size: 60px;
+				font-size: 45px;
 			}
 			.imac {
-				font-size: 40px;
+				font-size: 35px;
 			}
-			.baseline {
-				text-transform: none;
-				font-size: 15px;
-				letter-spacing: 5px;
-				margin-left: 90px;
-			}
+		}
+		h2 {
+			text-transform: none;
+			font-size: 15px;
+			letter-spacing: 3px;
+			color: white;
+			text-align: center;
 		}
 	}
 	#container {
@@ -124,7 +242,7 @@ body {
 					grid-template-rows: 58px 58px 58px;
 					grid-auto-flow: column;
 					.little-box {
-						background-color: #eee;
+						background-color: rgba(0,0,0,0.04);
 						border-radius: 2px;
 						img {
 							width: 43px;
@@ -138,7 +256,7 @@ body {
 			#regles {
 				background-image: @gradientGW;
 				border-radius: 5px;
-				padding: 3%;
+				padding: 3% 3% 4% 3%;
 				h3 {
 					font-family: @font;
 					color:@brown;
@@ -160,38 +278,56 @@ body {
 				#actions {
 					background-image: @gradientGW;
 					border-radius: 5px;
-					width: 55%;
+					width: 46%;
 					padding:2%;
+					#chronotime {
+						background-color: rgba(0,0,0,0);
+						border: none;
+						font-size: 50px;
+						letter-spacing: 5px;
+						font-family: @chronoFont5;
+						padding-bottom: 10%;
+					}
 					button {
+						margin: 0 5%;
 						font-family: @font;
-						color:@brown;
+						color:white;
 						text-transform: uppercase;
 						font-size: 20px;
-						background-image:@gradientChild;
-						padding: 10px 15px;
+						background-image:@gradientStrongBliss;
+						padding: 5px 10px;
 						border: none;
-						border-radius: 10px;
-						margin-right: 50px;
+						border-radius: 5px;
 						&:hover {
 							opacity: 0.7;
+						}
+						&:last-child {
+							background-image:none;
+							background-color: rgba(0,0,0,0);
+							color: black;
+							text-transform: none;
+							a {
+								color: black;
+								text-decoration: none;
+							}
 						}
 					}
 				}
 				#tetes {
 					background-image: @gradientGW;
 					border-radius: 5px;
-					width: 35%;
+					width: 39%;
 					padding:2%;
 					h2 {
 						font-family: @font;
 						color:@brown;
-						font-weight: bold;
+						font-size: 20px;
+						padding: 0 0 4% 0;
 					}
 					#img {
-						padding: 20px 0 40px 0;
 						img {
-							width: 56px;
-							padding: 0px 20px 10px 0px;
+							width: 45px;
+							padding: 0px 3% 3% 0px;
 							&:first-child {
 								padding-left: 0;
 							}
@@ -199,10 +335,17 @@ body {
 					}
 				}
 			}
+			#yt {
+				margin-top: 5%;
+				background-image: @gradientGW;
+				border-radius: 5px;
+				padding: 3% 3% 4% 3%;
+				height: 130px;
+
+			}
 		}
 	}
 	footer {
-		background-image: @gradientChild;
 		height: 100px;
 		margin-top: 30px;
 	}
