@@ -10,26 +10,26 @@
 
 
 
-*/
+																	*/
 
-const facile_1 = "089010504547300060000900003608001930219000754047200601100005000020006875508030410";
-const facile_1_solution = "389716524547382961126954873658471932219638754347295681197845263423196875568732419";
-const facile_2 = "092800056058690000600000708320507900700809003006204071603000005000024380850007140";
-const facile_2_solution = "792831456458697132613425798324517968715869243986234571643189275971524386852367149";
-const facile_3 = "050010700610000805704360910006002300457301296009400100035028401904000028001040090";
-const facile_3_solution = "253819764619742835784365912186592347457381296239476158635928471974163528821547693";
-const moyen_1 = "010300002089200674000700013100603900003908400009401006850006000746002830100008060";
-const moyen_1_solution = "417368592389251674625794813184673925563928417279451386859736241746192835132548967";
-const moyen_2 = "000518076004070210000620000900053004501000709300170005000092000062040300490538000";
-const moyen_2_solution = "329518476654973218817624953987253164521486739346179285735692841862147395491538762";
-const moyen_3 = "000190700000703006071500200003472008260000047800163900001007340400809000005016000";
-const moyen_3_solution = "235196784984723156671584239953472618261598347847163952861527349472839615395416728";
-const difficile_1 = "607000510020076000140500000000208005809000203600405000000003021000780060051000804";
-const difficile_1_solution = "637849512528176934149523768374298165859617243612435987786453921492781365351296874";
-const difficile_2 = "000918020010060098200075300600040000001000900000030002003570004670040030020893000";
-const difficile_2_solution = "365918427417263598289475316659842731321756984748931652183576294679142835524893167";
-const difficile_3 = "510008070000709000072030458000000020500304007080000000761050830000801000040700061";
-const difficile_3_solution = "513248976648759132972136458194687325526314987387529614761452839293861475845793261";
+																	const facile_1 = "089010504547300060000900003608001930219000754047200601100005000020006875508030410";
+																	const facile_1_solution = "389716524547382961126954873658471932219638754347295681197845263423196875568732419";
+																	const facile_2 = "092800056058690000600000708320507900700809003006204071603000005000024380850007140";
+																	const facile_2_solution = "792831456458697132613425798324517968715869243986234571643189275971524386852367149";
+																	const facile_3 = "050010700610000805704360910006002300457301296009400100035028401904000028001040090";
+																	const facile_3_solution = "253819764619742835784365912186592347457381296239476158635928471974163528821547693";
+																	const moyen_1 = "010300002089200674000700013100603900003908400009401006850006000746002830100008060";
+																	const moyen_1_solution = "417368592389251674625794813184673925563928417279451386859736241746192835132548967";
+																	const moyen_2 = "000518076004070210000620000900053004501000709300170005000092000062040300490538000";
+																	const moyen_2_solution = "329518476654973218817624953987253164521486739346179285735692841862147395491538762";
+																	const moyen_3 = "000190700000703006071500200003472008260000047800163900001007340400809000005016000";
+																	const moyen_3_solution = "235196784984723156671584239953472618261598347847163952861527349472839615395416728";
+																	const difficile_1 = "607000510020076000140500000000208005809000203600405000000003021000780060051000804";
+																	const difficile_1_solution = "637849512528176934149523768374298165859617243612435987786453921492781365351296874";
+																	const difficile_2 = "000918020010060098200075300600040000001000900000030002003570004670040030020893000";
+																	const difficile_2_solution = "365918427417263598289475316659842731321756984748931652183576294679142835524893167";
+																	const difficile_3 = "510008070000709000072030458000000020500304007080000000761050830000801000040700061";
+																	const difficile_3_solution = "513248976648759132972136458194687325526314987387529614761452839293861475845793261";
 
 /*
 Les sudokus se lisent comme ça
@@ -93,7 +93,7 @@ const startGame = (button) => {
 }
 
 startButton.addEventListener('click', evt => startGame(evt));
-	
+
 
 /*Cette fonction charge les grilles pré-établies dans le sudoku d'après l'index de la case donnée
 et le string de arrayToLoad*/
@@ -125,7 +125,7 @@ const changeBg = (smallBox) => {
 		/*On prend en compte s'il y a déjà un fond ou non*/
 		var nomImage = smallBox.style.backgroundImage;
 		var nbClick;
-			
+		
 		/*Si on n'a pas d'image de fond, alors on est à 0 click
 		sinon, on a actuellement une image qui s'appelle nomImage.substring(5, nomImage.length-2)
 		car les images ont le nom ' url("img/1.png") ', puis on récupère seulement le numéro en 
@@ -140,7 +140,7 @@ const changeBg = (smallBox) => {
 		/*On veut la photo d'après
 		C'est donc la photo après le nombre de click modulo 10 car si on dépasse 9, on veut revenir à 0*/
 		const imageToFetch = nbClick%10+1;
-			
+		
 		/*Si on est à 10, alors on met une case vide, sinon on change le bg*/
 		if(imageToFetch != 10){
 			/*Son chemin d'accès est dans image, et son extension est png*/
@@ -158,7 +158,7 @@ const handleClick = (element) => element.addEventListener('click', evt => change
 /*Si on right-click, on prevent son action par défault et ça efface ce qu'il y avait dans la case
 si ce n'est pas une case non-modifiable*/
 const handleRightClick = (element) => element.addEventListener('contextmenu', function(evt) {
-    evt.preventDefault();
+	evt.preventDefault();
 	if(!element.classList.contains("BlackAndWhite"))
 		element.style.background = '';
 });
@@ -280,29 +280,29 @@ function chronoStop(){
 /******************** API ***************************/
 
 // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
+var tag = document.createElement('script');
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
       // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
       var player;
       function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          
-          videoId: 'af1OkJgSoQM',
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
+      	player = new YT.Player('player', {
+      		
+      		videoId: 'af1OkJgSoQM',
+      		events: {
+      			'onReady': onPlayerReady,
+      			'onStateChange': onPlayerStateChange
+      		}
+      	});
       }
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-        event.target.playVideo();
+      	event.target.playVideo();
       }
 
       // 5. The API calls this function when the player's state changes.
@@ -310,13 +310,13 @@ function chronoStop(){
       //    the player should play for six seconds and then stop.
       var done = false;
       function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 0);
-          done = true;
-        }
+      	if (event.data == YT.PlayerState.PLAYING && !done) {
+      		setTimeout(stopVideo, 0);
+      		done = true;
+      	}
       }
       function stopVideo() {
-        player.stopVideo();
+      	player.stopVideo();
       }
 
 
