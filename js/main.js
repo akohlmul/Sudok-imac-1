@@ -291,8 +291,7 @@ function chronoStop(){
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          height: '100',
-          width: '740',
+          
           videoId: 'EQja4bK1k6c',
           events: {
             'onReady': onPlayerReady,

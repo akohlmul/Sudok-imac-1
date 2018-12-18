@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Aldrich|Allerta|Inconsolata|Jura|Orbitron|Sarpanch|Share+Tech+Mono" rel="stylesheet">
 	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -16,7 +17,7 @@
 <body>
 	<!-- POP UP Bienvenue -->
 	<div id="levelForm">
-		<h1>Bienvenue sur <span>s</span>udok<span class="imac">imac</span></h1>
+		<h1>Bienvenue sur <span class="s">s</span>udok<span class="imac">imac</span></h1>
 		<form id="form">
 			<ul>
 				<li>
@@ -53,7 +54,7 @@
 	<!-- PAGE -->
 	<header>
 		<h1>
-			<span>s</span>udok<span class="imac">imac</span>
+			<span class="s">s</span>udok<span class="imac">imac</span>
 		</h1>
 		<h2>Le seul jeu gratuit alliant logique et IMAC</h2>
 	</header>
@@ -162,13 +163,6 @@
 			</div>
 		</div>
 		<div id="flex-section2">
-			<div id="regles">
-				<h3>Keskekoi SudocIMAC ??</h3>
-				<p>
-					Le sudokIMAC classique contient 9 lignes et 9 colonnes, donc 81 cases au total. Le but du jeu est de remplir ces cases avec des trollimac en veillant toujours à ce qu'un même troll ne figure qu'une seule fois par colonne, une seule fois par ligne, et une seule fois par carré de 9 cases.
-				</p>
-				<p>Clique sur une case pour changer le troll.</p>
-			</div>
 			<div id="wrapper">
 				<div id="actions">
 					<form name="chronoForm">
@@ -177,8 +171,15 @@
 					<button id="valider">je valide</button>
 					<button id="abandon"><a href="">j'abandonne</a></button>
 				</div>
+				<div id="regles">
+					<h3>Keskekoi SudocIMAC ??</h3>
+					<p>
+						Le sudokIMAC classique contient 9 lignes et 9 colonnes, donc 81 cases au total. Le but du jeu est de remplir ces cases avec des trollimac en veillant toujours à ce qu'un même troll ne figure qu'une seule fois par colonne, une seule fois par ligne, et une seule fois par carré de 9 cases.
+					</p>
+					<p>Clique plusieurs fois sur une case pour changer le troll.</p>
+				</div>
 				<div id="tetes">
-					<h2>Tes victimes</h2>
+					<h3>Tes victimes</h3>
 					<section id="img">
 						<img src="img/1.png"/>
 						<img src="img/2.png"/>
@@ -191,21 +192,21 @@
 						<img src="img/9.png"/>
 					</section>
 				</div>
-			</div>
-			<div id="yt">
-				<h2>Un peu de musique</h2>
+				<div id="yt">
+				<h3>Ça peu t'aider</h3>
 				<div id="player">
-				<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+					<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+					</div>
 				</div>
 			</div>
+			</div>
 		</div>
-	</div>
-	<footer>
-		<p>
-			Un site IMAC 2018 par Margaux Vaillant et Amandine Kohlmuller
-		</p>
-	</footer>
-	<!--<script type="text/javascript" src="js/maincss.js"></script>--> 
-	<script type="text/javascript" src="js/main.js"></script> 
-</body>
-</html>
+		<footer>
+			<p>
+				Un site IMAC 2018 par Margaux Vaillant et Amandine Kohlmuller
+			</p>
+		</footer>
+		<!--<script type="text/javascript" src="js/maincss.js"></script>--> 
+		<script type="text/javascript" src="js/main.js"></script> 
+	</body>
+	</html>
