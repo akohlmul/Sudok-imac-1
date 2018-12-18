@@ -1,9 +1,6 @@
 // VARIABLES
-@orangeIMAC: ;
-@blueIMAC: ;
-@greenIMAC: ;
-@red: #c74242;;
-@brown: #231e1e;
+@blue:#a2a1dc;
+@grey: rgba(0,0,0,0.8);
 
 @gradientGW:linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 @gradientStrongBliss:linear-gradient(to right, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
@@ -48,6 +45,7 @@ body {
 			letter-spacing: 7px;
 			text-align: center;
 			margin-bottom: 5px;
+			color: @grey;
 			span {
 				text-transform: uppercase;
 				font-size: 50px;
@@ -66,6 +64,7 @@ body {
 						font-family:@font;
 						float: left;
 						padding-bottom: 10px;
+						color: @grey;
 					}
 					#inputName {
 						float: left;
@@ -73,6 +72,9 @@ body {
 						font-family: @font;
 						font-size: 15px;
 						padding: 1%;
+						border-radius: 5px;
+						border:solid @blue 2px;
+						color: @grey;
 					}
 					.level {
 						float: left;
@@ -80,6 +82,9 @@ body {
 						font-family: @font;
 						font-size: 15px;
 						padding: 1%;
+						border-radius: 5px;
+						border:solid @blue 2px;
+						color: @grey;
 					}
 				}
 			}
@@ -89,7 +94,7 @@ body {
 				text-transform: uppercase;
 				background-image: @gradientStrongBliss;
 				color: white;
-				padding: 5px 10px;
+				padding: 5px 20px;
 				border: none;
 				border-radius: 5px;
 				font-size: 20px;
@@ -119,10 +124,12 @@ body {
 			text-align: center;
 			margin-bottom: 5px;
 			padding-bottom:3%;
+			color: @grey;
 		}
 		h2 {
 			font-family: @font;
 			padding-bottom:5%;
+			color: @grey;
 			span {
 				font-family: @chronoFont5;
 				font-size: 30px;
@@ -165,10 +172,12 @@ body {
 			text-align: center;
 			margin-bottom: 5px;
 			padding-bottom:3%;
+			color: @grey;
 		}
 		h2 {
 			font-family: @font;
 			padding-bottom:5%;
+			color: @grey;
 			span {
 				font-family: @chronoFont5;
 				font-size: 30px;
@@ -274,14 +283,14 @@ body {
 				box-shadow:@boxShadow;
 				h3 {
 					font-family: @font;
-					color:@brown;
+					color: @grey;
 					font-weight: bold;
 					font-size: 22px;
 					padding-bottom: 1%;
 				}
 				p {
 					font-family: @font;
-					color:@brown;
+					color: @grey;
 					font-size: 14px;
 				}
 			}
@@ -299,13 +308,15 @@ body {
 					#chronotime {
 						background-color: rgba(0,0,0,0);
 						border: none;
-						font-size: 50px;
+						font-size: 45px;
 						letter-spacing: 5px;
 						font-family: @chronoFont5;
 						padding-bottom: 10%;
+						margin:0 2%;
+						color: @grey;
 					}
 					button {
-						margin: 0 5%;
+						margin: 0 3%;
 						font-family: @font;
 						color:white;
 						text-transform: uppercase;
@@ -323,7 +334,7 @@ body {
 							color: black;
 							text-transform: none;
 							a {
-								color: black;
+								color: @grey;
 								text-decoration: none;
 								&:hover {
 									opacity: 0.7;
@@ -340,7 +351,7 @@ body {
 					box-shadow:@boxShadow;
 					h2 {
 						font-family: @font;
-						color:@brown;
+						color: @grey;
 						font-size: 20px;
 						padding: 0 0 4% 0;
 					}
@@ -359,9 +370,15 @@ body {
 				margin-top: 5%;
 				background-image: @gradientGW;
 				border-radius: 5px;
-				padding: 3% 3% 4% 3%;
+				padding: 2% 3% 4% 3%;
 				height: 130px;
 				box-shadow:@boxShadow;
+				h2 {
+						font-family: @font;
+						color: @grey;
+						font-size: 20px;
+						padding-bottom: 2%;
+				}
 			}
 		}
 	}
