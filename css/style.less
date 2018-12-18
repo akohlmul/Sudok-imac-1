@@ -643,7 +643,6 @@ body {
 	}
 }
 
-
 @media (max-width:1084px) {
 	body {
 		#levelForm {
@@ -676,10 +675,347 @@ body {
 					}
 				}
 			}
+			#jouer {
+				margin:11% 0 5% 0;
+				padding: 1% 3%;
+				font-size: 1em;
+			}
+		}
+	}
+	#popBravo {
+		display: inline;
+		background-color: white;
+		position: absolute;
+		margin: auto;
+		right: 20%;		
+		left: 20%;
+		top: 10%;
+		z-index: 10;
+		border-radius: 5px;
+		text-align: center;
+		padding:3% 0;
+		box-shadow:@boxShadow;
+		h1 {
+			font-size: 1.8em;
+			font-family: @font;
+			letter-spacing: .25em;
+			text-align: center;
+			margin-bottom: 1%;
+			padding-bottom:3%;
+			color: @grey;
+		}
+		h2 {
+			font-family: @font;
+			padding-bottom:5%;
+			color: @grey;
+			span {
+				font-family: @chronoFont5;
+				font-size: 1.8em;
+			}
+		}
+		#rejouer {
+			font-family: @font;
+			text-transform: uppercase;
+			background-image: @gradientStrongBliss;
+			padding: 1% 3%;
+			border: none;
+			border-radius: 5px;
+			font-size: 1.2em;
+			&:hover {
+				opacity: 0.7;
+			}
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+	#popFail {
+		display: inline;
+		background-color: white;
+		position: absolute;
+		margin: auto;
+		right: 20%;		
+		left: 20%;
+		top: 10%;
+		z-index: 10;
+		border-radius: 5px;
+		text-align: center;
+		padding:3% 0;
+		box-shadow:@boxShadow;
+		h1 {
+			font-size: 1.8em;
+			font-family: @font;
+			letter-spacing: .25em;
+			text-align: center;
+			margin-bottom: 1%;
+			padding-bottom:3%;
+			color: @grey;
+		}
+		h2 {
+			font-family: @font;
+			padding-bottom:5%;
+			color: @grey;
+			span {
+				font-family: @chronoFont5;
+				font-size: 1.8em;
+			}
+		}
+		button {
+			margin: 0 3%;
+			font-family: @font;
+			text-transform: uppercase;
+			background-image: @gradientStrongBliss;
+			padding: 1% 3%;
+			border: none;
+			border-radius: 5px;
+			font-size: 1.2em;
+			color: white;
+			&:hover {
+				opacity: 0.7;
+			}
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+	#cover {
+	}
+	#container {
+		#flex-section1 {
+			width: 394px;
+			padding: 5px;
+			.wrapper {
+				width: 394px;
+				grid-gap: 3px;
+				grid-template-columns: repeat(3, 130px);
+				grid-template-rows: 130px 130px 130px;
+				.box {
+					padding: 5px;
+					grid-gap: 4px;
+					grid-template-columns: repeat(3, 38px);
+					grid-template-rows: 38px 38px 38px;
+				}
+			}
+		}
+		#flex-section2 {
+			#wrapper {
+				#actions {
+					form {
+						padding: 2% 0 10% 3%;
+						#chronotime {
+							font-size: .9em;
+							letter-spacing: .25em;
+						}
+					}
+					button {
+						font-size: 1.2em;
+						&:last-child {
+							a {
+								font-size: .7em;
+							}
+						}
+					}
+				}
+				#regles {
+					h3 {
+						font-size: .9em;
+					}
+					p {
+						font-size: .5em;
+						&:last-child {
+							font-size: .6em;
+						}
+					}
+				}
+				#tetes {
+					h3 {
+						font-size: .9em;
+					}
+				}
+				#yt {
+					h3 {
+						font-size: .9em;
+					}
+					#player {
+					}
+				}
+			}
+
+		}
+	}
+	footer {
+		padding: 4% 0 3% 0;
+		p {
+			font-size: .5em;
+		}
+	}
+}
+
+@media (max-width:972px) {
+	body {
+		#levelForm {
+			right: 10%;		
+			left: 10%;
+			top: 5%;
+			h1 {
+				font-size: 1.2em;
+				letter-spacing: .20em;
+				margin-bottom: 0;
+				.s {
+					font-size: 1.1em;
+				}
+				.imac {
+					font-size: 1em;
+				}
+			}
+			form {
+				ul {
+					li {
+						padding: 29% 0;
+						label {
+							font-size: .6em;
+							padding-bottom: 3%;
+						}
+						#inputName {
+							font-size: .6em;
+							border:solid @blue 1.5px;
+						}
+						.level {
+							font-size: .6em;
+							border:solid @blue 1.5px;
+						}
+					}
+				}
 				#jouer {
 					margin:11% 0 5% 0;
 					padding: 1% 3%;
-					font-size: 1em;
+					font-size: .8em;
+				}
+			}
+		}
+		#popBravo {
+			display: inline;
+			background-color: white;
+			position: absolute;
+			margin: auto;
+			right: 20%;		
+			left: 20%;
+			top: 10%;
+			z-index: 10;
+			border-radius: 5px;
+			text-align: center;
+			padding:3% 0;
+			box-shadow:@boxShadow;
+			h1 {
+				font-size: 1.8em;
+				font-family: @font;
+				letter-spacing: .25em;
+				text-align: center;
+				margin-bottom: 1%;
+				padding-bottom:3%;
+				color: @grey;
+			}
+			h2 {
+				font-family: @font;
+				padding-bottom:5%;
+				color: @grey;
+				span {
+					font-family: @chronoFont5;
+					font-size: 1.8em;
+				}
+			}
+			#rejouer {
+				font-family: @font;
+				text-transform: uppercase;
+				background-image: @gradientStrongBliss;
+				padding: 1% 3%;
+				border: none;
+				border-radius: 5px;
+				font-size: 1.2em;
+				&:hover {
+					opacity: 0.7;
+				}
+				a {
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
+		#popFail {
+			display: inline;
+			background-color: white;
+			position: absolute;
+			margin: auto;
+			right: 20%;		
+			left: 20%;
+			top: 10%;
+			z-index: 10;
+			border-radius: 5px;
+			text-align: center;
+			padding:3% 0;
+			box-shadow:@boxShadow;
+			h1 {
+				font-size: 1.8em;
+				font-family: @font;
+				letter-spacing: .25em;
+				text-align: center;
+				margin-bottom: 1%;
+				padding-bottom:3%;
+				color: @grey;
+			}
+			h2 {
+				font-family: @font;
+				padding-bottom:5%;
+				color: @grey;
+				span {
+					font-family: @chronoFont5;
+					font-size: 1.8em;
+				}
+			}
+			button {
+				margin: 0 3%;
+				font-family: @font;
+				text-transform: uppercase;
+				background-image: @gradientStrongBliss;
+				padding: 1% 3%;
+				border: none;
+				border-radius: 5px;
+				font-size: 1.2em;
+				color: white;
+				&:hover {
+					opacity: 0.7;
+				}
+				a {
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
+		#container {
+			#flex-section2 {
+				width: 90%;
+				#wrapper {
+					#actions {
+						margin-top: 3%;
+					}
+					#regles {
+						margin-top: 3%;
+					}
+				}
+
+			}
+		}
+	}
+}
+
+@media (max-width:537px) {
+	body {
+		#levelForm {
+			form {
+				ul {
+					width: 40%;
 				}
 			}
 		}
@@ -785,18 +1121,18 @@ body {
 		}
 		#container {
 			#flex-section1 {
-				width: 394px;
+				width: 345px;
 				padding: 5px;
 				.wrapper {
-					width: 394px;
+					width: 345px;
 					grid-gap: 3px;
-					grid-template-columns: repeat(3, 130px);
-					grid-template-rows: 130px 130px 130px;
+					grid-template-columns: repeat(3, 111px);
+					grid-template-rows: 111px 111px 111px;
 					.box {
 						padding: 5px;
 						grid-gap: 4px;
-						grid-template-columns: repeat(3, 38px);
-						grid-template-rows: 38px 38px 38px;
+						grid-template-columns: repeat(3, 33px);
+						grid-template-rows: 33px 33px 33px;
 					}
 				}
 			}
@@ -804,48 +1140,25 @@ body {
 				#wrapper {
 					#actions {
 						form {
-							padding: 2% 0 10% 3%;
 							#chronotime {
-								font-size: .9em;
-								letter-spacing: .25em;
+								font-size: .8em;
 							}
 						}
 						button {
-							font-size: 1.2em;
+							font-size: .9em;
 							&:last-child {
 								a {
-									font-size: .7em;
+									font-size: 0.6em;
 								}
 							}
 						}
 					}
 					#regles {
-						h3 {
-							font-size: .9em;
-						}
 						p {
-							font-size: .5em;
+							font-size: .45em;
 							&:last-child {
-								font-size: .6em;
+								font-size: .5em;
 							}
-						}
-					}
-					#tetes {
-						h3 {
-							font-size: .9em;
-						}
-						#img {
-							img {
-							}
-						}
-					}
-					#yt {
-						h3 {
-							font-size: .9em;
-						}
-						#player {
-							height: 20%;
-							width: 100%;
 						}
 					}
 				}
@@ -853,7 +1166,6 @@ body {
 			}
 		}
 		footer {
-			padding: 4% 0 3% 0;
 			p {
 				font-size: .5em;
 			}
@@ -861,5 +1173,194 @@ body {
 	}
 }
 
+@media (max-width:425px) {
+	body {
+		#levelForm {
+			h1 {
+				font-size: 1em;
+				.s {
+					font-size: .9em;
+				}
+				.imac {
+					font-size: .8em;
+				}
+			}
+			form {
+				ul {
+					li {
+						padding: 40% 0;
+					}
+				}
+				#jouer {
+					margin:20% 0 10% 0;
+				}
+			}
+		}
+		#popBravo {
+			display: inline;
+			background-color: white;
+			position: absolute;
+			margin: auto;
+			right: 20%;		
+			left: 20%;
+			top: 10%;
+			z-index: 10;
+			border-radius: 5px;
+			text-align: center;
+			padding:3% 0;
+			box-shadow:@boxShadow;
+			h1 {
+				font-size: 1.8em;
+				font-family: @font;
+				letter-spacing: .25em;
+				text-align: center;
+				margin-bottom: 1%;
+				padding-bottom:3%;
+				color: @grey;
+			}
+			h2 {
+				font-family: @font;
+				padding-bottom:5%;
+				color: @grey;
+				span {
+					font-family: @chronoFont5;
+					font-size: 1.8em;
+				}
+			}
+			#rejouer {
+				font-family: @font;
+				text-transform: uppercase;
+				background-image: @gradientStrongBliss;
+				padding: 1% 3%;
+				border: none;
+				border-radius: 5px;
+				font-size: 1.2em;
+				&:hover {
+					opacity: 0.7;
+				}
+				a {
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
+		#popFail {
+			display: inline;
+			background-color: white;
+			position: absolute;
+			margin: auto;
+			right: 20%;		
+			left: 20%;
+			top: 10%;
+			z-index: 10;
+			border-radius: 5px;
+			text-align: center;
+			padding:3% 0;
+			box-shadow:@boxShadow;
+			h1 {
+				font-size: 1.8em;
+				font-family: @font;
+				letter-spacing: .25em;
+				text-align: center;
+				margin-bottom: 1%;
+				padding-bottom:3%;
+				color: @grey;
+			}
+			h2 {
+				font-family: @font;
+				padding-bottom:5%;
+				color: @grey;
+				span {
+					font-family: @chronoFont5;
+					font-size: 1.8em;
+				}
+			}
+			button {
+				margin: 0 3%;
+				font-family: @font;
+				text-transform: uppercase;
+				background-image: @gradientStrongBliss;
+				padding: 1% 3%;
+				border: none;
+				border-radius: 5px;
+				font-size: 1.2em;
+				color: white;
+				&:hover {
+					opacity: 0.7;
+				}
+				a {
+					color: white;
+					text-decoration: none;
+				}
+			}
+		}
+		header {
+			h2 {
+				font-size: 0.6em;
+			}
+		}
+		#container {
+			#flex-section1 {
+				width: 297px;
+				padding: 5px;
+				.wrapper {
+					width: 297px;
+					grid-gap: 3px;
+					grid-template-columns: repeat(3, 96px);
+					grid-template-rows: 96px 96px 96px;
+					.box {
+						padding: 4px;
+						grid-gap: 2px;
+						grid-template-columns: repeat(3, 29px);
+						grid-template-rows: 29px 29px 29px;
+					}
+				}
+			}
+			#flex-section2 {
+				#wrapper {
+					#actions {
+						form {
+							#chronotime {
+								font-size: .6em;
+							}
+						}
+						button {
+							font-size: .7em;
+							&:last-child {
+								padding: 10% 0 15% 0;
+							}
+						}
+					}
+					#regles {
+						h3 {
+							font-size: .7em;
+						}
+						p {
+							font-size: .4em;
+							&:last-child {
+								font-size: .45em;
+							}
+						}
+					}
+					#tetes {
+						h3 {
+							font-size: ..7em;
+						}
+					}
+					#yt {
+						h3 {
+							font-size: .7em;
+						}
+					}
+				}
+			}
+		}
+		footer {
+			p {
+				letter-spacing: .15em;
+				font-size: .4em;
+			}
+		}
+	}
+}
 
-@media (max-width:846px) {}
