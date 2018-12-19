@@ -60,7 +60,7 @@ const validButton = document.querySelector("#valider");
 const jeveuxcontinuer = document.querySelector("#continer"); //Changer en continUer
 const popUpBravo = document.querySelector("#popBravo");
 const popUpFail = document.querySelector("#popFail");
-
+var arrayTetes = new Array();
 
 /*A enlever plus tard*/
 popUpBravo.style.display = 'none';
@@ -80,11 +80,12 @@ const startGame = (button) => {
 		//Le niveau est choisi et on lui ajoute un nombre aléatoire entre 1 et 3
 		gridToDisplay = choosenLevel+'_'+(Math.floor(Math.random() * 3) + 1 );
 		solution = gridToDisplay+'_solution';
-		
+		console.log(eval(solution));
 		//La grille à charger
 		//On doit mettre eval pour qu'il comprenne que c'est le nom d'une variable
 		arrayToLoad = Array.from(eval(gridToDisplay));
 		
+		loadTetes();
 		//Pour chaque petite case, on va devoir lui attribuer une valeur de départ ou non
 		allSmallBoxes.forEach(loadGrid);
 	}else{
@@ -94,6 +95,27 @@ const startGame = (button) => {
 
 startButton.addEventListener('click', evt => startGame(evt));
 
+function loadTetes(){
+	var nbAleatoire;
+	for(var i=0; i<9; i++){
+		
+		/*Un nombre aléatoire entre 1 et 24*/
+		nbAleatoire = Math.floor(Math.random() *36)+1;
+		/*Si cette tête n'est pas encore dans l'array on l'ajoute*/
+		if(arrayTetes.indexOf(nbAleatoire) == -1){
+			arrayTetes.push(nbAleatoire);
+		}else{
+			i--;
+		}
+	}
+	
+	/*Changer le css des têtes des victimes*/
+	const allImgDisplay = document.querySelectorAll('#tetes img');	
+	for(var i=0; i<9; i++){
+		allImgDisplay[i].outerHTML = '<img src="img/'+arrayTetes[i]+'.png">';
+	}
+	
+}
 
 /*Cette fonction charge les grilles pré-établies dans le sudoku d'après l'index de la case donnée
 et le string de arrayToLoad*/
@@ -103,7 +125,10 @@ const loadGrid = (element, index) =>{
 	la bonne image et on change la couleur de fond
 	On lui ajoute la classe "BlackAndWhite"*/
 	if(arrayToLoad[index] != 0){		
-		element.style.background = 'center / contain no-repeat rgba(0,0,0,0.15) url("img/'+arrayToLoad[index]+'.png")';
+		
+		var imageName = arrayTetes[arrayToLoad[index]-1];
+
+		element.style.background = 'center / contain no-repeat rgba(0,0,0,0.15) url("img/'+imageName+'.png")';
 		element.classList.add("BlackAndWhite");
 	}else{
 		element.style.background = '';
@@ -124,30 +149,24 @@ const changeBg = (smallBox) => {
 		
 		/*On prend en compte s'il y a déjà un fond ou non*/
 		var nomImage = smallBox.style.backgroundImage;
-		var nbClick;
-		
-		/*Si on n'a pas d'image de fond, alors on est à 0 click
-		sinon, on a actuellement une image qui s'appelle nomImage.substring(5, nomImage.length-2)
-		car les images ont le nom ' url("img/1.png") ', puis on récupère seulement le numéro en 
-		faisant nomImage.substring(4, 5);*/
+		var nextImage;
+		/*Si on n'a pas d'image de fond, alors prend la premiere image
+		Sinon, si l'index de l'image est inférieur à 9 (donc que ce n'est pas la derniere image)
+		on change le bg, sinon on le vide*/
 		if(nomImage == ''){
-			nbClick = 0;
+			smallBox.style.background = 'center / contain no-repeat #eee url("img/'+arrayTetes[0]+'.png")';	;
 		}else{
-			nomImage= nomImage.substring(5, nomImage.length-2);
-			nbClick = nomImage.substring(4, 5);
-		}
-		
-		/*On veut la photo d'après
-		C'est donc la photo après le nombre de click modulo 10 car si on dépasse 9, on veut revenir à 0*/
-		const imageToFetch = nbClick%10+1;
-		
-		/*Si on est à 10, alors on met une case vide, sinon on change le bg*/
-		if(imageToFetch != 10){
-			/*Son chemin d'accès est dans image, et son extension est png*/
-			const urlImageToFetch = 'center / contain no-repeat #eee url("img/'+imageToFetch+'.png")';	
-			smallBox.style.background = urlImageToFetch;		
-		}else{
-			smallBox.style.background = '';
+			/*On a un array de nombre et non pas de string*/
+			nomImage= Number(nomImage.substring(9, nomImage.length-6));
+
+			if(arrayTetes.indexOf(nomImage)+1 <9){
+				nextImage = arrayTetes[arrayTetes.indexOf(nomImage) +1];
+				
+				const background = 'center / contain no-repeat #eee url("img/'+nextImage+'.png")';	
+				smallBox.style.background = background;
+			}else{
+				smallBox.style.background = '';
+			}
 		}
 	}
 }
@@ -172,24 +191,26 @@ allSmallBoxes.forEach(handleRightClick);
 en plus on a qu'une comparaison*/
 function insertInString(element){
 	var nbPhoto = element.style.backgroundImage;
-	
+
 	/*Si on n'a pas d'image de fond, alors on est à 0*/
 	if(nbPhoto == ''){
 		nbPhoto = 0;
 	}else{
 		/*Sinon on prend le chiffre*/
-		nbPhoto = nbPhoto.substring(9, 10);
+		nbPhoto= nbPhoto.substring(9, nbPhoto.length-6);
+		nbPhoto = arrayTetes.indexOf(Number(nbPhoto))+1;
 	}
 
 	/*On ajoute au string le numéro*/
-	stringResult += nbPhoto;
+	stringResult += nbPhoto.toString();
 }
 
 /*Si on a validé, on va vérifier si on a eu la bonne solution*/
 function buttonClicked() {
 	/*On crée la chaine*/
+	stringResult='';
 	allSmallBoxes.forEach(insertInString);
-
+console.log(stringResult);
 	/*On remet eval() pour savoir que c'est le nom de la variable
 	et on compare les deux strings
 	si localeCompare renvoie 0 alors c'est gagné sinon on affiche le popup
