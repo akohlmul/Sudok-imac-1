@@ -100,7 +100,7 @@ function loadTetes(){
 	for(var i=0; i<9; i++){
 		
 		/*Un nombre aléatoire entre 1 et 24*/
-		nbAleatoire = Math.floor(Math.random() *36)+1;
+		nbAleatoire = Math.floor(Math.random() *35)+1;
 		/*Si cette tête n'est pas encore dans l'array on l'ajoute*/
 		if(arrayTetes.indexOf(nbAleatoire) == -1){
 			arrayTetes.push(nbAleatoire);
