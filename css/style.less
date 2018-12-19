@@ -369,8 +369,14 @@ body {
 						img {
 							width: 7%;
 							padding: 0 0% 1% 3%;
+							transform: rotate(0deg);
+							transition: transform 500ms;
+							cursor:pointer;
 							&:first-child {
 								padding-left:0;
+							}
+							&:hover {
+								transform: rotate(360deg);
 							}
 						}
 					}
