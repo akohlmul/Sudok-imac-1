@@ -40,14 +40,14 @@
 	<div id="popBravo">
 		<h1>Félicitation machinbiduletruc</h1>
 		<h2>Tu as réussi en  <span> 0:00:00:00</span></h2>
-		<button id="rejouer"><a href="https://perso-etudiant.u-pem.fr/~akohlmul/sudokimac/">rejouer</a></button>
+		<button id="rejouer" onClick="history.go(0)"><a href="">rejouer</a></button>
 	</div> 
 	<!-- POP UP FAIL -->
 	<div id="popFail">
 		<h1>Perdu machinbiduletruc</h1>
 		<h2>Tu as perdu en <span>0:00:00:00</span></h2>
 		<button id="continer">Continuer</button>
-		<button><a href="https://perso-etudiant.u-pem.fr/~akohlmul/sudokimac/">Nique ça m'a saoulé</a></button>
+		<button onClick="history.go(0)"><a href="">Nique ça m'a saoulé</a></button>
 	</div>
 	<!-- COVER -->
 	<div id="cover"></div>
@@ -169,7 +169,7 @@
 						<input type="text" name="chronotime" id="chronotime" value="0:00:00:000"/>
 					</form>
 					<button id="valider">je valide</button>
-					<button id="abandon"><a href="">j'abandonne</a></button>
+					<button id="abandon" onClick="history.go(0)"><a href="">j'abandonne</a></button>
 				</div>
 				<div id="regles">
 					<h3>Keskekoi SudokIMAC ??</h3>
