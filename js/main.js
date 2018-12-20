@@ -210,7 +210,6 @@ function buttonClicked() {
 	/*On crée la chaine*/
 	stringResult='';
 	allSmallBoxes.forEach(insertInString);
-console.log(stringResult);
 	/*On remet eval() pour savoir que c'est le nom de la variable
 	et on compare les deux strings
 	si localeCompare renvoie 0 alors c'est gagné sinon on affiche le popup
