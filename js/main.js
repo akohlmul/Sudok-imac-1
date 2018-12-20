@@ -80,7 +80,6 @@ const startGame = (button) => {
 		//Le niveau est choisi et on lui ajoute un nombre aléatoire entre 1 et 3
 		gridToDisplay = choosenLevel+'_'+(Math.floor(Math.random() * 3) + 1 );
 		solution = gridToDisplay+'_solution';
-		console.log(eval(solution));
 		//La grille à charger
 		//On doit mettre eval pour qu'il comprenne que c'est le nom d'une variable
 		arrayToLoad = Array.from(eval(gridToDisplay));
